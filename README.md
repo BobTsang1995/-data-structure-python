@@ -122,7 +122,7 @@ class SingleLinkList(Node):
             j += 1
             
             
-if __name__ == "__main__":
+if __ name __ == "__ main __":
 
 
     sll = SingleLinkList()
