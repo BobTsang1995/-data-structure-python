@@ -5,6 +5,12 @@ class Node(object):
         self.next = None
 
 class SingleLinkList(Node):
+
+
+#之前按照书上的代码，这个地方没有继承上面的类(Node),导致出现了AttributeError: 'NoneType' object has no attribute 'next'的错误，尝试了两
+#种方法第一种是上面👆继承Node的方法，此时代码可以执行下去。第二种方法，我采用将while cur.next is not None:中的next改为_next，将其变成普通类
+#成员的方法，代码也可以继续执行。
+
         def __init__(self,node = None):
         self.__head = node
 
@@ -114,3 +120,25 @@ class SingleLinkList(Node):
                     self.remove(cur.item)
                     self.insert(j, x)
             j += 1
+            
+            
+if __name__ == "__main__":
+
+
+    sll = SingleLinkList()
+    # ll.SingleLinkList()
+    print(sll.is_empty())
+    print(sll.length())
+
+    sll.add(8)
+    sll.append(1)
+    sll.append(2)
+    sll.append(3)
+    sll.append(4)
+    sll.append(5)
+    sll.append(6)
+    print(sll.is_empty())
+    print(sll.length())
+
+
+    print(sll.Travel())
