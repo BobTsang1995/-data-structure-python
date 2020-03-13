@@ -4,17 +4,9 @@ class Node(object):
         self.item = item
         self.next = None
 
-class SingleLinkList(object):
-    def __init__(self, node=None, *args, **kwargs):
-        if node is None:
-            self.__head = node
-        else:
-            self.__head = Node(node)
-            for arg in args:
-                self.append(arg)
-        if kwargs.values() is not None:
-            for kwarg in kwargs:
-                self.append(kwargs[kwarg]
+class SingleLinkList(Node):
+        def __init__(self,node = None):
+        self.__head = node
 
 
     def is_empty(self):
