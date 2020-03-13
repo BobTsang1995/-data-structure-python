@@ -1,1 +1,1 @@
-# solid-potato-
+该项目用于复习数据结构（python）版
